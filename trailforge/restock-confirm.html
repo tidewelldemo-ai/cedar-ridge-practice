@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Request received · TrailForge Supplier Portal</title>
+<link rel="stylesheet" href="../style.css"><style>:root{--accent:#3B4A5A}</style></head>
+<body><div class="notice">Practice website for the Claude Mastery course. Fictional companies. For training use. Nothing on this site sends, charges or stores anything. <a href="../index.html">Practice site home</a></div>
+<header class="site"><div class="wrap"><a class="brand" href="../trailforge/index.html">TRAILFORGE SUPPLIER PORTAL</a><nav><a href="../trailforge/index.html">Portal home</a><a href="../trailforge/stock.html">Stock list</a><a href="../trailforge/restock.html">Restock request</a><a href="../trailforge/orders.html">Order history</a><a href="../trailforge/quick-order.html">Quick order</a><a href="../trailforge/news.html">Supplier news</a><a href="../trailforge/sign-in.html">Sign in</a></nav></div></header>
+<main><div class="wrap">
+
+<h1>Restock request received</h1>
+<div class="msg"><strong>Practice site:</strong> nothing was sent. On the real portal, TrailForge would confirm by email within one business day.</div>
+<div id="summary"><p class="muted">No request details to show. <a href="restock.html">Make a restock request</a>.</p></div>
+<script>
+try{var r=JSON.parse(sessionStorage.getItem('tfRestock')||'null');
+if(r){var h='<p>Request number <strong>'+r.no+'</strong></p><table><tr><th>Item</th><th class="num">Quantity</th></tr>';
+r.lines.forEach(function(l){var t=document.createElement('td');t.textContent=l.name;h+='<tr>'+t.outerHTML+'<td class="num">'+l.qty+'</td></tr>';});
+h+='</table>';var p=document.createElement('p');p.textContent='Deliver to: '+r.shipto+(r.needby?' · Needed by: '+r.needby:'')+' · Requested by: '+r.requester;
+document.getElementById('summary').innerHTML=h;document.getElementById('summary').appendChild(p);}}catch(e){}
+</script>
+
+</div></main>
+<footer><div class="wrap">Fictional company. For training use. This page is part of the Claude Mastery practice website.</div></footer>
+</body></html>
